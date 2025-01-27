@@ -29,7 +29,7 @@ import org.testng.Assert;
 public class UploadDownLoad {
 
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
+		
 		//#235 upload and download excel file.
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
@@ -60,7 +60,7 @@ public class UploadDownLoad {
 		Assert.assertEquals("Updated Excel Data successfully.", toastText);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(toastLocator)); 
 		
-		//#237: now element is visible verify excel data is updated in the web table
+		//#237: now element is visible verify excel data is updated in the web table:
 		//#237: code to get price of Apple. (write smart xpath to find the table row column cell based on the conditions
 		//xpath: "//div[@class='sc-jsEeTM itluUR rdt_TableRow'][2]/child::div[4]"
 		//to get to the Price column, go up the parent until entire column containing apple is highkighted.-->div[text() = 'Apple']/parent::div/parent::div
