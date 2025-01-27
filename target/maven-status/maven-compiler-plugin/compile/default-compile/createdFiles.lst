@@ -1,0 +1,8 @@
+mausumiacademy\pageobjects\CheckOutPage.class
+mausumiacademy\AbstractComponents\AbstractComponent.class
+mausumiacademy\pageobjects\LandingPage.class
+mausumiacademy\pageobjects\CartPage.class
+mausumiacademy\pageobjects\ConformationPage.class
+mausumiacademy\resources\ExtentReporterNG.class
+mausumiacademy\pageobjects\OrderPage.class
+mausumiacademy\pageobjects\ProductCatalog.class

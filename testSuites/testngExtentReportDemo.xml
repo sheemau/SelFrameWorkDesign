@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- To run both the tests below is parallel. use the parallel="tests" attribute at the suite level-->
+<suite name="Suite" parallel="tests">
+<!-- To run selective tests using groups (to do - write the groups syntax-->
+
+<!-- TestReportListeners-->
+
+<listeners>
+	<listener class-name="MausumiAcademy.TestComponents.Listeners" />
+</listeners>
+
+
+<!-- thread-count="5" means 5 tests in this Test class is allowed to run parallely
+so if you have 100 tests, 5 will run in parallel, once they are done, next 5 will run etc as
+As we are using only 1 class  StandAloneTestBackup2 and this class has 2 @Test, only these 2 tests should show up
+in the Extent Report-->
+  <test thread-count="5" name="Submit Order Test" >
+    <classes>
+           <class name="MausumiAcademy.tests.StandAloneTestBackup2"/>
+    </classes>
+    
+  </test> 
+   <test thread-count="5" name="Error Validations Test" >
+    <classes>
+           <class name="MausumiAcademy.tests.ErrorValidationsTest"/>
+    </classes>
+    
+  </test> 
+  
+  
+</suite> <!-- Suite -->

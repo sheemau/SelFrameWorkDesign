@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="MausumiAcademy.TestComponents.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Error Validations Test(failed)" verbose="0">
+    <classes>
+      <class name="MausumiAcademy.tests.ErrorValidationsTest">
+        <methods>
+          <include name="ProductErrorValidation"/>
+          <include name="LoginErrorValidation"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- MausumiAcademy.tests.ErrorValidationsTest -->
+    </classes>
+  </test> <!-- Error Validations Test(failed) -->
+  <test thread-count="5" parallel="tests" name="Submit Order Test(failed)" verbose="0">
+    <classes>
+      <class name="MausumiAcademy.tests.StandAloneTestBackup2">
+        <methods>
+          <include name="OrderHistoryTest"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="SubmitOrder" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- MausumiAcademy.tests.StandAloneTestBackup2 -->
+    </classes>
+  </test> <!-- Submit Order Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
